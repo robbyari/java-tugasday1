@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         List<Job> jobs = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        Utils utils = new Utils();
 
         while (true) {
             System.out.println("==============DIGIJOBS==============");
@@ -20,15 +21,15 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    Utils.addJob(jobs, scanner);
+                    utils.addJob(jobs, scanner);
                     break;
 
                 case 2:
-                    Utils.printAllJobs(jobs);
+                    utils.printAllJobs(jobs);
                     break;
 
                 case 3:
-                    Utils.deleteJob(jobs, scanner);
+                    utils.deleteJob(jobs, scanner);
                     break;
 
                 case 4:

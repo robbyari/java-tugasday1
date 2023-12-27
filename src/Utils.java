@@ -2,17 +2,17 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Utils {
-    private static int inputInt(String message, Scanner scanner) {
+    private int inputInt(String message, Scanner scanner) {
         System.out.println(message);
         return scanner.nextInt();
     }
 
-    private static String inputString(String message, Scanner scanner) {
+    private String inputString(String message, Scanner scanner) {
         System.out.println(message);
         return scanner.next();
     }
 
-    public static void addJob(List<Job> jobs, Scanner scanner) {
+    public void addJob(List<Job> jobs, Scanner scanner) {
         int newJobID = inputInt("Enter job ID:", scanner);
 
         try {
@@ -34,14 +34,14 @@ public class Utils {
 
     }
 
-    public static void printAllJobs(List<Job> jobs) {
+    public void printAllJobs(List<Job> jobs) {
         System.out.println("All Jobs:");
         jobs.forEach(job ->
                 System.out.println("Job ID: " + job.jobID + ", Address: " + job.jobAddress + ", Job position ID: " + job.jobPositionID + ", Job position name: " + job.jobPositionName)
         );
     }
 
-    public static void deleteJob(List<Job> jobs, Scanner scanner) {
+    public void deleteJob(List<Job> jobs, Scanner scanner) {
         int deleteJobID = inputInt("Enter job ID to delete:", scanner);
         boolean jobFound = false;
 
